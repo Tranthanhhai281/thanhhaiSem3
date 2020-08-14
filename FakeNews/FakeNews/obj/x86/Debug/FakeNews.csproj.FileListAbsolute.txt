@@ -1,0 +1,11 @@
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\FakeNews.csprojAssemblyReference.cache
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\App.g.i.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\App.g.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\MainPage.g.i.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\MainPage.g.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\App.xaml
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\MainPage.xaml
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\App.xbf
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\MainPage.xbf
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\XamlTypeInfo.g.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\FakeNews\FakeNews\obj\x86\Debug\XamlSaveStateFile.xml
