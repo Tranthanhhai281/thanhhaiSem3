@@ -22,9 +22,10 @@ namespace FakeNews.Model
         public string Image { get; set; }
     }
 
+    
     private static List<NewsItem> getNewsItems()
     {
-       
+
             var items = new List<NewsItem>();
 
             items.Add(new NewsItem()
@@ -120,7 +121,6 @@ namespace FakeNews.Model
             });
 
             return items;
-      
     }
 
     public class NewsManager

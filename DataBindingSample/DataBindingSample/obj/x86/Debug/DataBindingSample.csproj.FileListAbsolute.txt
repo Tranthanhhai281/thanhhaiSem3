@@ -1,0 +1,9 @@
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\DataBindingSample.csprojAssemblyReference.cache
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\App.g.i.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\App.g.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\Views\MainPage.g.i.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\Views\MainPage.g.cs
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\App.xaml
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\Views\MainPage.xaml
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\App.xbf
+D:\Hoc Lap Trinh\SEM3\thanhhaiSem3\DataBindingSample\DataBindingSample\obj\x86\Debug\Views\MainPage.xbf
