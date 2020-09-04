@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Google.Apis.YouTube.v3.Data;
+using MyToolkit.Multimedia;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,14 +32,14 @@ namespace XemYouTubeThoi
             this.InitializeComponent();
         }
 
-        protected async override void OnNavigateTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             try
             {
-                if (Networkinterface.GetIsNetworkAvailable())
+                if (NetworkInterface.GetIsNetworkAvailable())
                 {
                     video = e.Parameter as Video;
-                    var Url = await YouTube.GetVideoUriAsync(video.Id, YouTubeQuality.Quality1080p);
+                    var Url = await YouTube.GetVideoUriAsync(video.Id, YouTubeQuality.Quality1080P);
                     Player.Source = Url.Uri;
                 }
                 else

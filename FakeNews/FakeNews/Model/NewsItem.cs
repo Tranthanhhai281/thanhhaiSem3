@@ -20,6 +20,7 @@ namespace FakeNews.Model
         public string Dateline { get; set; }
 
         public string Image { get; set; }
+       
     }
 
     

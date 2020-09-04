@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Google.Apis.Services;
+using Google.Apis.YouTube.v3;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using XemYouTubeThoi.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,7 +30,7 @@ namespace XemYouTubeThoi
         private YouTubeService youtubeService =
             new YouTubeService(new BaseClientService.Initializer
             {
-                Apikey = "AIzaSyDBf8bq5AKUSHfF_CF0eeZ2RCLzyfmOi5s",
+                ApiKey = "AIzaSyDBf8bq5AKUSHfF_CF0eeZ2RCLzyfmOi5s",
                 ApplicationName = "youtube"
             });
         List<Video> ListVideo = new List<Video>();
@@ -60,9 +65,9 @@ namespace XemYouTubeThoi
                     {
                         ListVideo.Add(new Video
                         {
-                            Title = item.Snippet.title,
+                            Title = item.Snippet.Title,
                             Id = item.Id.VideoId,
-                            Img = item.Snippet.Thumbnails.Default_.Url
+                            Img = item.Snippet.Thumbnails.Default__.Url
                         });
                     }
                     lv.ItemsSource = null;
@@ -79,7 +84,7 @@ namespace XemYouTubeThoi
 
         private void lv_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Vieo video = e.ClickedItem as Video;
+            Video video = e.ClickedItem as Video;
             Frame.Navigate(typeof(VideoPage), video);
         }
     }
