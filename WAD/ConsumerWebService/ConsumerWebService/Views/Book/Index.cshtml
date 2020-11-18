@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ConsumerWebService.Models.BookClient>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>BookId</th>
+        <th>Book Name</th>
+        <th>ISBN</th>
+        <th>Action</th>
+    </tr>
+
+@foreach (ConsumerWebService.Models.Book book in ViewBag.listBooks) {
+    <tr>
+        <td>@book.BookId</td>
+        <td>@book.Title</td>
+        <td>@book.ISBN</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = book.BookId}) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\bin\EmployeeManagerServices.dll.config
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\bin\EmployeeManagerServices.dll
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\bin\EmployeeManagerServices.pdb
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\obj\Debug\EmployeeManagerServices.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\obj\Debug\EmployeeManagerServices.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\obj\Debug\EmployeeManagerServices.dll
+C:\Users\Admin\source\repos\EmployeeManagerServices\EmployeeManagerServices\obj\Debug\EmployeeManagerServices.pdb

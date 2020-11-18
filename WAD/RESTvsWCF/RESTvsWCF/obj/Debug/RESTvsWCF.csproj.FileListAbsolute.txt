@@ -1,0 +1,6 @@
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\WAD\RESTvsWCF\RESTvsWCF\bin\RESTvsWCF.dll.config
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\WAD\RESTvsWCF\RESTvsWCF\bin\RESTvsWCF.dll
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\WAD\RESTvsWCF\RESTvsWCF\bin\RESTvsWCF.pdb
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\WAD\RESTvsWCF\RESTvsWCF\obj\Debug\RESTvsWCF.csproj.CoreCompileInputs.cache
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\WAD\RESTvsWCF\RESTvsWCF\obj\Debug\RESTvsWCF.dll
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\WAD\RESTvsWCF\RESTvsWCF\obj\Debug\RESTvsWCF.pdb
