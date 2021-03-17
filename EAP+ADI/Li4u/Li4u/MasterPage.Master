@@ -1,0 +1,318 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" chaset="utf-8" >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" >
+    <title>Quan Ly Thu Vien Sach</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>    
+    <link href="Style.css" rel="stylesheet" type="text/css" />     
+
+    
+
+<script type="text/javascript" language="JavaScript1.2" src="../../MeNu/stmenu.js"></script>
+    
+    
+    <style type="text/css">
+        .style6
+        {
+            width: 14px;
+        }
+        </style>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server"  >
+    <div>
+    
+        <table cellpadding="0" cellspacing="0" class="Table" >
+           
+            <tr>
+                <td align="left" valign="top" style="border-width: thin; text-align: center;" 
+                    colspan="3" > 
+                    &nbsp;</td>
+            </tr>
+           
+            <tr >
+                <td colspan="3" > 
+                     <div style="text-align: center">
+                     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="1000" height="125">
+                      <param name="movie" value="../../Image/baner.swf" />
+                      <param name="quality" value="high" />
+                         <embed src="../Image/baner.swf"
+                          quality="high"
+                          type="application/x-shockwave-flash"
+                          width="1000"
+                          height="125"
+                          pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+                    </object>
+                     </div>
+                </td>
+            </tr>
+           
+           <tr >
+                <td colspan="3" > 
+                <div>
+                    <script type="text/javascript" language="JavaScript1.2">
+                    <!--
+                    stm_bm(["menu5df9",700,"","../../MeNu/blank.gif",0,"","",0,0,250,0,1000,1,0,0,"","1000",0,0,1,2,"default","hand",""],this);
+                    stm_bp("p0",[0,4,0,0,0,0,0,0,100,"",-2,"",-2,50,0,0,"#799BD8","transparent","../../MeNu/060417line.gif",3,0,0,"#000000","",-1,-1,0,"transparent","",3,"../../MeNu/060417buttona2.gif",26,5,0,"transparent","",3,"",-1,-1,0,"transparent","",3,"../../MeNu/060417buttona1.gif",26,5,0,"transparent","",3,"","","",""]);
+                    stm_ai("p0i0",[0,"Trang chu","","",-1,-1,0,"../../ThuVien/DocGia/Default.aspx?Bien_1=Menu","_self","","","","",0,0,0,"","",0,0,0,1,1,"#FFFFF7",1,"#B5BED6",1,"","../../MeNu/060417button.gif",2,3,0,0,"#FFFFF7","#000000","#FFFFFF","#0000FF","bold 8pt Verdana","bold 8pt Verdana",0,0],90,26);
+                    stm_aix("p0i1","p0i0",[0,"Gioi thieu","","",-1,-1,0,"#","_self","","","","",0,0,0,"","",0,0,0,1,1,"#FFFFF7",1,"#B5BED6",1,"","../../MeNu/060417button.gif",3],90,26);
+                    stm_aix("p0i3","p0i1",[0,"Qui Dinh","","",-1,-1,0,"../../ThuVien/DocGia/QuiDinh.aspx"],90,26);
+                    stm_aix("p0i3","p0i0",[0,"Dang Nhap","","",-1,-1,0,"DangNhap.aspx"],90,26);                   
+                    stm_ep();
+                    stm_em();
+                    //-->
+                    
+                    </script>                  
+                   
+                </div>                
+        
+                </td>
+            </tr>
+            
+            <tr >
+                <td  colspan="3" >  
+                <br />                     
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                        StartingNodeUrl="~/Web.sitemap" />
+                   
+                   <span class="AccountLink">&nbsp;<asp:Label ID="lbtaikhoan" runat="server" 
+                        Text="TK :"></asp:Label>
+&nbsp;
+                   <asp:HyperLink ID="hlnkTaiKhoan" runat="server" style="color: #FF0066">[Tài Khoản]</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="lnkdangxuat" runat="server" onclick="lnkDangXuat_Click" 
+                        style="text-align: center">Đăng Xuất</asp:LinkButton>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="Lnkquanly" runat="server" OnClientClick="return OpenLoginWindow() ">Đăng Nhập Quản Lý</asp:LinkButton>
+                     </span>                                
+                 </td>
+            </tr>    
+           
+                                 
+            <tr>
+                <td  colspan="3" > 
+                <div><br />
+                </div>
+                    <div>
+                        <span class="timkiem">
+                            <asp:TextBox ID="txtTim" runat="server" Width="252px"></asp:TextBox>&nbsp;
+                            <asp:DropDownList ID="drpTim" runat="server">
+                                <asp:ListItem Selected="True" Value="1">Tựa Sách</asp:ListItem>
+                                <asp:ListItem Value="2">Tác Giả</asp:ListItem>
+                                <asp:ListItem Value="3">Nhà Xuất Ban</asp:ListItem>
+                                <asp:ListItem Value="4">Năm Xuất Bản</asp:ListItem>
+                            </asp:DropDownList>
+                            &nbsp;
+                            <asp:Button ID="btTimKiem" runat="server" Height="23px" Text="Tìm Kiếm" 
+                            Width="66px" onclick="btTimKiem_Click" />
+                        </span>
+                    </div>
+                                       
+                 </td>
+            </tr>
+           
+            <tr>
+                <td align="left" valign="top" class=" tdleft" style="border-width: thin"> 
+                    
+                    <div class="divframe" 
+                        style=" margin-top:5px; height:500px; top: 0px; left: 0px;">
+                        <div class="divframe_head">
+                            Danh Mục              
+                        </div>
+                                <script type="text/javascript" language="JavaScript1.2">
+                            <!--
+                            stm_bm(["menu3b81",700,"","../../MeNu/blank.gif",0,"","",0,0,250,0,500,1,0,0,"","",201326847,0,1,2,"default","hand",""],this);
+                            stm_bp("p0",[1,4,0,0,0,4,10,7,100,"",-2,"",-2,100,0,0,"#CCCCCC","#E8F4ED","../../MeNu/0604line.gif",3,0,0,"#000000"]);
+                            stm_ai("p0i0",[0,"Tin Hoc","","",-1,-1,0,"SachTinHoc.aspx?Bien_1=Menu","_self","","","../../MeNu/dian.gif","../../MeNu/dianmove.gif",10,7,0,"","",0,0,0,0,1,"#FFFFF7",1,"#4AB6DB",0,"","../../MeNu/0604button2.gif",3,3,0,0,"#FFFFF7","#000000","#000000","#FFFFFF","8pt Verdana","8pt Verdana",0,0]);
+                            stm_aix("p0i1","p0i0",[0,"Tu Dien ","","",-1,-1,0,"TuDien.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i2","p0i0",[0,"Triet Hoc","","",-1,-1,0,"SachTrietHoc.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i3","p0i0",[0,"Tai Chinh - Tin Dung","","",-1,-1,0,"SachTaiChinh-TinDung.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i4","p0i0",[0,"Chung Khoang","","",-1,-1,0,"SachChungKhoang.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i5","p0i0",[0,"Thue","","",-1,-1,0,"SachThue.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i6","p0i0",[0,"Toan Hoc","","",-1,-1,0,"SachToanHoc.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i7","p0i0",[0,"Khoa Hoc - Xa Hoi","","",-1,-1,0,"SachKhoaHoc-XaHoi.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i8","p0i0",[0,"Kinh Te Hoc","","",-1,-1,0,"SachKinhTeHoc.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i9","p0i0",[0,"Quan Tri","","",-1,-1,0,"SachQuanTri.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i10","p0i0",[0,"Luat","","",-1,-1,0,"SachLuat.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i11","p0i0",[0,"Sinh Hoc","","",-1,-1,0,"SachSinhHoc.aspx"]);
+                            stm_aix("p0i12","p0i0",[0,"Van Hoc","","",-1,-1,0,"#","_self","","","../../MeNu/dian.gif","dianmove.gif",10,7,0,"../../MeNu/0604arrow1.gif","../../MeNu/0604arrow2.gif",7,9]);
+                            stm_bpx("p1","p0",[1,2,0,20,0,2,10,0,100,"",-2,"",-2,50,0,0,"#999999","#E6EE87"]);
+                            stm_aix("p1i0","p0i0",[0,"Van Hoc Viet Nam ","","",-1,-1,0,"SachVanHocVietNam.aspx?Bien_1=Menu"]);
+                            stm_aix("p1i1","p0i0",[0,"Van Hoc The Gioi","","",-1,-1,0,"SachVanHocTheGioi.aspx?Bien_1=Menu"]);
+                            stm_ep();
+                            
+                            stm_aix("p0i13","p0i12",[0,"Lich Su","","",-1,-1,0,"#"]);
+                            stm_bpx("p2","p1",[]);
+                            stm_aix("p2i0","p0i0",[0,"Lich Su Viet Nam ","","",-1,-1,0,"SachLichSuVietNam.aspx?Bien_1=Menu"],206,0);
+                            stm_aix("p2i1","p0i0",[0,"Lich Su The Gioi","","",-1,-1,0,"SachLichSuTheGioi.aspx?Bien_1=Menu"],206,0);
+                            stm_ep();
+                            
+                            stm_aix("p0i14","p0i0",[0,"Thuy San","","",-1,-1,0,"SachThuySan.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i15","p0i0",[0,"Cay Rau - Cay an Trai ","","",-1,-1,0,"SachCayRau-CayanTrai.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i16","p0i0",[0,"Sau Benh ","","",-1,-1,0,"SachSauBenh.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i17","p0i0",[0,"Ky Thuat Xay Dung","","",-1,-1,0,"SachKyThuatXayDung.aspx?Bien_1=Menu"]);
+                             stm_aix("p0i17","p0i0",[0,"Du Lich","","",-1,-1,0,"Du Lich.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i18","p0i0",[0,"Co Khi","","",-1,-1,0,"SachCoKhi.aspx?Bien_1=Menu"]);
+                            stm_aix("p0i19","p0i0",[0,"Dien Tu ","","",-1,-1,0,"SachDienTu.aspx?Bien_1=Menu"]);
+                            
+                            stm_ep();
+                            stm_cf([2,0,0,"Main_frame","Navigation_frame",1]);
+                            stm_em();
+                            //-->
+                            </script>
+                    </div>                     
+                 </td>
+                <td  valign="top" class=" tdcenter">                                               
+                    <table style=" width:802px; ">
+                              <tr>
+                                  <td style=" width:1px;"></td>
+                                  <td class="Table">                              
+                                         <div class=" divframe" style=" height:1044px;">
+                                            <div class="divframe_head" >
+                                                                                                    
+                                            </div>
+                                            <div id="content"" >
+                                            <asp:ContentPlaceHolder ID="Main" runat="server" >                                                 
+                                                  
+                                                   
+                                                  
+                                                   </asp:ContentPlaceHolder>
+                                            </div>
+                                        </div>                                   
+                                         
+                                  </td>
+                                  <td class="style6">
+                                      </td>
+                              </tr>
+                          </table>                   
+                   </td>
+                <td align="left" valign="top" class=" tdleft" >
+                    <div class="divframe" 
+                        style=" margin-top:5px; height:225px; font-family: Tahoma;">
+                        <div class="divframe_head">
+                            Thư Viện Trường                             
+                        </div>
+                        <div style=" margin-top:5px; height:200px; width:200px; font-family: Tahoma;">
+                            <asp:Image ID="imgThuVien" runat="server" Height="190px" Width="190px" 
+                                ImageUrl="~/Image/thuvientruong.gif" />
+                        </div>
+                    </div>                      
+                     <div>
+                         <br/>
+                     </div>                     
+                    <div class="divframe" style=" height:300px">
+                        <div class="divframe_head">
+                            Tác Giả
+                            
+                        </div>
+                        <div style="width:170px; margin-left:10px; margin-right:10px;"  >                 
+                            
+                           
+                                <asp:GridView ID="grdTacGia" runat="server" AutoGenerateColumns="False" 
+                                    DataKeyNames="MaTacGia" DataSourceID="sqTacGia" ForeColor="Black" 
+                                    BorderColor="Tan" AllowPaging="True" BackColor="LightGoldenrodYellow" 
+                                    BorderWidth="1px" CellPadding="2" GridLines="None">
+                                    <Columns>
+                                        <asp:HyperLinkField DataNavigateUrlFields="MaTacGia" 
+                                            DataNavigateUrlFormatString="~/ThuVien/DocGia/TimKiemTheoTacGia.aspx?MaTacGia={0}" 
+                                            DataTextField="TenTacGia" DataTextFormatString="{0}" />
+                                    </Columns>
+                                    <FooterStyle BackColor="Tan" />
+                                    <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" 
+                                        HorizontalAlign="Center" />
+                                    <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                                    <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                                    <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="sqTacGia" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                    SelectCommand="SELECT * FROM [TacGia]"></asp:SqlDataSource>
+                           
+                            
+                        </div>
+                    </div>  
+                     <div>
+                         <br/>
+                     </div>                     
+                    <div class="divframe" style="height:300px">
+                        <div class="divframe_head" >
+                            Nhà Xuất Bản</div>
+                            <div style="width:180px; margin-left:10px; margin-right:10px">
+                                
+                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                                        DataKeyNames="MaNhaXuatBan" DataSourceID="sqlNXB" BorderColor="Tan" 
+                                        AllowPaging="True" BackColor="LightGoldenrodYellow" BorderWidth="1px" 
+                                        CellPadding="2" ForeColor="Black" GridLines="None">
+                                        <Columns>
+                                            <asp:HyperLinkField DataNavigateUrlFields="MaNhaXuatBan" 
+                                                DataNavigateUrlFormatString="~/ThuVien/DocGia/TimKiemTheoNXB.aspx?MaNhaXuatBan={0}" 
+                                                DataTextField="TenNhaXuatBan" DataTextFormatString="{0}" />
+                                        </Columns>
+                                        <FooterStyle BackColor="Tan" />
+                                        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" 
+                                            HorizontalAlign="Center" />
+                                        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                                        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                                        <EditRowStyle BorderColor="White" />
+                                        <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="sqlNXB" runat="server" 
+                                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                        SelectCommand="SELECT * FROM [NhaXuatBan]"></asp:SqlDataSource>
+                                
+                            </div>
+                    </div>                  
+                     <div>
+                         <br/>
+                     </div>                     
+                    <div class="divframe" style="height:150px">
+                        <div class="divframe_head">
+                        LoGo Nhà Xuất Bản
+                        </div>
+                        <div style=" margin-top:10px; margin-left:50px; margin-bottom:10px;
+                             height:100px; width:100px; font-family: Tahoma;">
+                            <asp:Image ID="Image1" runat="server" Height="100px" 
+                                ImageUrl="~/Image/logo.gif" Width="100px" />
+                        </div>
+                    </div>                                        
+                 </td>
+            </tr>
+            
+            <tr>
+                <td colspan="3">                    
+                    &nbsp;</td>
+            </tr>
+            
+             <tr>
+                <td colspan="3" class=" bottom">
+                <h3 style="color: #FF0066">Trường Đại Học FPT</h3>
+                <ul>
+                <li class="style4">ÐC: So 8 Ton That Huyet</li>
+                <li class="style4">ÐT: </li>
+                <li style="color: #CC33FF">Fax: </li>
+                </ul>
+                 </td>
+            </tr>
+        </table>    
+         
+    </div>
+   <script language="javascript" type="text/javascript">
+        function OpenLoginWindow() {
+    var winWidth = 370;
+    var winHeight = 270;
+    winLeft=(screen.width-winWidth)/2;
+    winTop=(screen.height-winHeight)/2;
+    s=location.pathname.substring(0, location.pathname.indexOf("/",1))//s la "/Quanlytuyensinh"
+    s="http://"+location.host+s+"/ThuVien/QuanLy/DangNhap.aspx";//localhost.host la "localhost:'so'"
+    win=window.open(s,"DangNhap","resizable=no,scrollbars=no,width="+winWidth+",height="+winHeight+",left="+winLeft+",top="+winTop);
+    win.focus();
+    return false;
+}
+   </script>
+    
+    </form>
+</body>
+</html>
+

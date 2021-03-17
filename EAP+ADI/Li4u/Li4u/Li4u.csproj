@@ -1,0 +1,715 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AC644CA-F763-4FC0-8FE8-CC6D362D5A00}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Li4u</RootNamespace>
+    <AssemblyName>Li4u</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\DaTa.mdf" />
+    <Content Include="App_Data\DaTa_log.ldf">
+      <DependentUpon>DaTa.mdf</DependentUpon>
+    </Content>
+    <Content Include="Image\anh1.jpg" />
+    <Content Include="Image\backmain.gif" />
+    <Content Include="Image\baner.swf" />
+    <Content Include="Image\bottom.gif" />
+    <Content Include="Image\divframe_head.gif" />
+    <Content Include="Image\lam.gif" />
+    <Content Include="Image\login.jpeg" />
+    <Content Include="Image\logo.gif" />
+    <Content Include="Image\logout.jpeg" />
+    <Content Include="Image\nen.jpg" />
+    <Content Include="Image\thuvientruong.gif" />
+    <Content Include="Image\xanh.gif" />
+    <Content Include="MeNu\060417button.gif" />
+    <Content Include="MeNu\060417buttona1.gif" />
+    <Content Include="MeNu\060417buttona2.gif" />
+    <Content Include="MeNu\060417line.gif" />
+    <Content Include="MeNu\0604arrow1.gif" />
+    <Content Include="MeNu\0604arrow2.gif" />
+    <Content Include="MeNu\0604button2.gif" />
+    <Content Include="MeNu\0604line.gif" />
+    <Content Include="MeNu\blank.gif" />
+    <Content Include="MeNu\dian.gif" />
+    <Content Include="MeNu\dianmove.gif" />
+    <Content Include="MeNu\stdom.js" />
+    <Content Include="MeNu\stfilter.js" />
+    <Content Include="MeNu\sthilight.js" />
+    <Content Include="MeNu\stie.js" />
+    <Content Include="MeNu\stinit.js" />
+    <Content Include="MeNu\stmenu.js" />
+    <Content Include="MeNu\stscroll.js" />
+    <Content Include="MeNu\stslip.js" />
+    <Content Include="MeNu\stwinels.js" />
+    <Content Include="ThuVien\Anh\277 Cau Do Viet nam.jpg" />
+    <Content Include="ThuVien\Anh\Ban Ve Khe Uot Xa Hoi.jpg" />
+    <Content Include="ThuVien\Anh\bi quyet tay trang thanh ty phu.jpg" />
+    <Content Include="ThuVien\Anh\Bo Luat Hang Hai.jpg" />
+    <Content Include="ThuVien\Anh\Chinh Sach Thue Moi 2010 Va Van Ban Huong Dan.jpg" />
+    <Content Include="ThuVien\Anh\Cong Nghe Che Tao May.gif" />
+    <Content Include="ThuVien\Anh\Cong Thuc Tai Chinh Ke Toan.jpg" />
+    <Content Include="ThuVien\Anh\csdl.jpg" />
+    <Content Include="ThuVien\Anh\Dai Tu Dien Chu Nom.jpg" />
+    <Content Include="ThuVien\Anh\Dai Tu Dien Lao_Viet.jpg" />
+    <Content Include="ThuVien\Anh\dam me kham pha.jpg" />
+    <Content Include="ThuVien\Anh\Dong Vat Co Xuong Song.jpg" />
+    <Content Include="ThuVien\Anh\Du Lich 3 Mien Hanh Trinh Phuong Bac.jpg" />
+    <Content Include="ThuVien\Anh\Excel 2007 Hoc Biet Ngay.jpg" />
+    <Content Include="ThuVien\Anh\Giao Trinh Qui Hoach Tuyen Tinh.jpg" />
+    <Content Include="ThuVien\Anh\Gioi Thieu Lich Su Nuoc Viet.jpg" />
+    <Content Include="ThuVien\Anh\Huong Dan Thuc Hien Ke Khai.jpg" />
+    <Content Include="ThuVien\Anh\khongsach.jpg" />
+    <Content Include="ThuVien\Anh\kythuatlaptrinhungdungasp.net.jpg" />
+    <Content Include="ThuVien\Anh\Lap Trinh C Vi Dieu Khien.jpg" />
+    <Content Include="ThuVien\Anh\lichsu0.jpg" />
+    <Content Include="ThuVien\Anh\lichsu1.jpg" />
+    <Content Include="ThuVien\Anh\MatMaTayTang.jpg" />
+    <Content Include="ThuVien\Anh\nghe thuat ghi nho cua mot chuyen gia.jpg" />
+    <Content Include="ThuVien\Anh\Nhan Dang He Thong Tuyen Tinh Lien Tuc.jpg" />
+    <Content Include="ThuVien\Anh\Nhung Dieu Ban Chua Biet.jpg" />
+    <Content Include="ThuVien\Anh\Nhung Nguoi Khon Kho.jpg" />
+    <Content Include="ThuVien\Anh\Nhung Qui Dinh Moi Nhat Ve Ke Toan.jpg" />
+    <Content Include="ThuVien\Anh\Non Nuoc Viet Nam.jpg" />
+    <Content Include="ThuVien\Anh\Phuong Phap Gia Cong Tinh.jpg" />
+    <Content Include="ThuVien\Anh\Sau Benh Chinh Hai Mot So Cay Thuc Pham.jpg" />
+    <Content Include="ThuVien\Anh\Sau Bo Ba The Gioi Ky La Cua Con Trung.jpg" />
+    <Content Include="ThuVien\Anh\sinhhoctebao.jpg" />
+    <Content Include="ThuVien\Anh\So Tay Ly Thuyet Can Kim Loai.gif" />
+    <Content Include="ThuVien\Anh\Thanh Toan Quoc Te.jpg" />
+    <Content Include="ThuVien\Anh\the gioi 5000 nhung dieu bi an.jpg" />
+    <Content Include="ThuVien\Anh\Thiet Bi May Cong Nghiep Va Bao Tri.jpg" />
+    <Content Include="ThuVien\Anh\triethocmaclenin.jpg" />
+    <Content Include="ThuVien\Anh\Tu Dien Ngan Hang.gif" />
+    <Content Include="ThuVien\Anh\Tu Dien Viet Thai.jpg" />
+    <Content Include="ThuVien\Anh\Tu Hoc Vi Tinh Trong 8 Tuan.jpg" />
+    <Content Include="ThuVien\Anh\Tung Buoc Lam QuenVoi May Tinh.jpg" />
+    <Content Include="ThuVien\Anh\tutuonghcm.jpg" />
+    <Content Include="ThuVien\Anh\Vang Bong Mot Thoi.jpg" />
+    <Content Include="ThuVien\Anh\Ve Va Thiet Ke Mach Bang Orcard.jpg" />
+    <Content Include="ThuVien\Anh\xp.jpg" />
+    <Content Include="ThuVien\DocGia\ChiTietDangKyMuon.aspx" />
+    <Content Include="ThuVien\DocGia\ChiTietSach.aspx" />
+    <Content Include="ThuVien\DocGia\DangNhap.aspx" />
+    <Content Include="ThuVien\DocGia\Default.aspx" />
+    <Content Include="ThuVien\DocGia\Default2.aspx" />
+    <Content Include="ThuVien\DocGia\Du Lich.aspx" />
+    <Content Include="ThuVien\DocGia\QuiDinh.aspx" />
+    <Content Include="ThuVien\DocGia\SachCayRau-CayanTrai.aspx" />
+    <Content Include="ThuVien\DocGia\SachChungKhoang.aspx" />
+    <Content Include="ThuVien\DocGia\SachCoKhi.aspx" />
+    <Content Include="ThuVien\DocGia\SachDienTu.aspx" />
+    <Content Include="ThuVien\DocGia\SachKhoaHoc-XaHoi.aspx" />
+    <Content Include="ThuVien\DocGia\SachKinhTeHoc.aspx" />
+    <Content Include="ThuVien\DocGia\SachKyThuatXayDung.aspx" />
+    <Content Include="ThuVien\DocGia\SachLichSuTheGioi.aspx" />
+    <Content Include="ThuVien\DocGia\SachLichSuVietNam.aspx" />
+    <Content Include="ThuVien\DocGia\SachLuat.aspx" />
+    <Content Include="ThuVien\DocGia\SachQuanTri.aspx" />
+    <Content Include="ThuVien\DocGia\SachSauBenh.aspx" />
+    <Content Include="ThuVien\DocGia\SachSinhHoc.aspx" />
+    <Content Include="ThuVien\DocGia\SachTaiChinh-TinDung.aspx" />
+    <Content Include="ThuVien\DocGia\SachThue.aspx" />
+    <Content Include="ThuVien\DocGia\SachThuySan.aspx" />
+    <Content Include="ThuVien\DocGia\SachTinHoc.aspx" />
+    <Content Include="ThuVien\DocGia\SachToanHoc.aspx" />
+    <Content Include="ThuVien\DocGia\SachTrietHoc.aspx" />
+    <Content Include="ThuVien\DocGia\SachVanHocTheGioi.aspx" />
+    <Content Include="ThuVien\DocGia\SachVanHocVietNam.aspx" />
+    <Content Include="ThuVien\DocGia\TimKiemTheoNXB.aspx" />
+    <Content Include="ThuVien\DocGia\TimKiemTheoTacGia.aspx" />
+    <Content Include="ThuVien\DocGia\TKNamXuatBan.aspx" />
+    <Content Include="ThuVien\DocGia\TKTenNhaXuatBan.aspx" />
+    <Content Include="ThuVien\DocGia\TKTenTacGia.aspx" />
+    <Content Include="ThuVien\DocGia\TKTuaSach.aspx" />
+    <Content Include="ThuVien\DocGia\TuDien.aspx" />
+    <Content Include="ThuVien\QuanLy\Anh\SDC10180.jpg" />
+    <Content Include="ThuVien\QuanLy\ChiTietGiaHan.aspx" />
+    <Content Include="ThuVien\QuanLy\ChiTietHoSoLuotMuon.aspx" />
+    <Content Include="ThuVien\QuanLy\ChiTietMuonSach.aspx" />
+    <Content Include="ThuVien\QuanLy\ChiTietSach.aspx" />
+    <Content Include="ThuVien\QuanLy\ChiTietThemDocGia.aspx" />
+    <Content Include="ThuVien\QuanLy\ChiTietTraSach.aspx" />
+    <Content Include="ThuVien\QuanLy\DangKyTaiKhoan.aspx" />
+    <Content Include="ThuVien\QuanLy\DangNhap.aspx" />
+    <Content Include="ThuVien\QuanLy\Default.aspx" />
+    <Content Include="ThuVien\QuanLy\Default2.aspx" />
+    <Content Include="ThuVien\QuanLy\GiaHan.aspx" />
+    <Content Include="ThuVien\QuanLy\LapChiTietHoaDon.aspx" />
+    <Content Include="ThuVien\QuanLy\LapChiTietViPham.aspx" />
+    <Content Include="ThuVien\QuanLy\LapDocGia.aspx" />
+    <Content Include="ThuVien\QuanLy\LapHoaDon.aspx" />
+    <Content Include="ThuVien\QuanLy\LapLuotMuon.aspx" />
+    <Content Include="ThuVien\QuanLy\SachCayRau.aspx" />
+    <Content Include="ThuVien\QuanLy\SachChungKhoan.aspx" />
+    <Content Include="ThuVien\QuanLy\SachCoKhi.aspx" />
+    <Content Include="ThuVien\QuanLy\SachDienTu.aspx" />
+    <Content Include="ThuVien\QuanLy\SachDuLich.aspx" />
+    <Content Include="ThuVien\QuanLy\SachKhoaHocXaHoi.aspx" />
+    <Content Include="ThuVien\QuanLy\SachKinhTeHoc.aspx" />
+    <Content Include="ThuVien\QuanLy\SachKyThuatXayDung.aspx" />
+    <Content Include="ThuVien\QuanLy\SachLichSuTheGioi.aspx" />
+    <Content Include="ThuVien\QuanLy\SachLichSuVietNam.aspx" />
+    <Content Include="ThuVien\QuanLy\SachLuat.aspx" />
+    <Content Include="ThuVien\QuanLy\SachQuanTri.aspx" />
+    <Content Include="ThuVien\QuanLy\SachSauBenh.aspx" />
+    <Content Include="ThuVien\QuanLy\SachSinhHoc.aspx" />
+    <Content Include="ThuVien\QuanLy\SachTaiChinh.aspx" />
+    <Content Include="ThuVien\QuanLy\SachThue.aspx" />
+    <Content Include="ThuVien\QuanLy\SachThuySan.aspx" />
+    <Content Include="ThuVien\QuanLy\SachTinHoc.aspx" />
+    <Content Include="ThuVien\QuanLy\SachToanHoc.aspx" />
+    <Content Include="ThuVien\QuanLy\SachTrietHoc.aspx" />
+    <Content Include="ThuVien\QuanLy\SachVanHocTheGioi.aspx" />
+    <Content Include="ThuVien\QuanLy\SachVanHocVietNam.aspx" />
+    <Content Include="ThuVien\QuanLy\SuaQuiDinh.aspx" />
+    <Content Include="ThuVien\QuanLy\SuaSach.aspx" />
+    <Content Include="ThuVien\QuanLy\ThemChucVu.aspx" />
+    <Content Include="ThuVien\QuanLy\ThemDocGia.aspx" />
+    <Content Include="ThuVien\QuanLy\ThemNhaXuatBan.aspx" />
+    <Content Include="ThuVien\QuanLy\ThemSach.aspx" />
+    <Content Include="ThuVien\QuanLy\ThemTacGia.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKe.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeHoSoDangKy.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeLuotDangKy.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeLuotMuon.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeNhaXuatBan.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeSach.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeSachGiaHan.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeSachQuaHan.aspx" />
+    <Content Include="ThuVien\QuanLy\ThongKeTacGia.aspx" />
+    <Content Include="ThuVien\QuanLy\TimKiemTheoNXB.aspx" />
+    <Content Include="ThuVien\QuanLy\TimKiemTheoTacGia.aspx" />
+    <Content Include="ThuVien\QuanLy\TKNamXuatBan.aspx" />
+    <Content Include="ThuVien\QuanLy\TKTenNhaXuatBan.aspx" />
+    <Content Include="ThuVien\QuanLy\TKTenTacGia.aspx" />
+    <Content Include="ThuVien\QuanLy\TKTuaSach.aspx" />
+    <Content Include="ThuVien\QuanLy\TraSach.aspx" />
+    <Content Include="ThuVien\QuanLy\TraSach1.aspx" />
+    <Content Include="ThuVien\QuanLy\TuDien.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageQL.Master.cs">
+      <DependentUpon>MasterPageQL.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageQL.Master.designer.cs">
+      <DependentUpon>MasterPageQL.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\ChiTietDangKyMuon.aspx.cs">
+      <DependentUpon>ChiTietDangKyMuon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\ChiTietSach.aspx.cs">
+      <DependentUpon>ChiTietSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\Du Lich.aspx.cs">
+      <DependentUpon>Du Lich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\QuiDinh.aspx.cs">
+      <DependentUpon>QuiDinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachCayRau-CayanTrai.aspx.cs">
+      <DependentUpon>SachCayRau-CayanTrai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachChungKhoang.aspx.cs">
+      <DependentUpon>SachChungKhoang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachCoKhi.aspx.cs">
+      <DependentUpon>SachCoKhi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachDienTu.aspx.cs">
+      <DependentUpon>SachDienTu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachKhoaHoc-XaHoi.aspx.cs">
+      <DependentUpon>SachKhoaHoc-XaHoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachKinhTeHoc.aspx.cs">
+      <DependentUpon>SachKinhTeHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachKyThuatXayDung.aspx.cs">
+      <DependentUpon>SachKyThuatXayDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachLichSuTheGioi.aspx.cs">
+      <DependentUpon>SachLichSuTheGioi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachLichSuVietNam.aspx.cs">
+      <DependentUpon>SachLichSuVietNam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachLuat.aspx.cs">
+      <DependentUpon>SachLuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachQuanTri.aspx.cs">
+      <DependentUpon>SachQuanTri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachSauBenh.aspx.cs">
+      <DependentUpon>SachSauBenh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachSinhHoc.aspx.cs">
+      <DependentUpon>SachSinhHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachTaiChinh-TinDung.aspx.cs">
+      <DependentUpon>SachTaiChinh-TinDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachThue.aspx.cs">
+      <DependentUpon>SachThue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachThuySan.aspx.cs">
+      <DependentUpon>SachThuySan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachTinHoc.aspx.cs">
+      <DependentUpon>SachTinHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachToanHoc.aspx.cs">
+      <DependentUpon>SachToanHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachTrietHoc.aspx.cs">
+      <DependentUpon>SachTrietHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachVanHocTheGioi.aspx.cs">
+      <DependentUpon>SachVanHocTheGioi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\SachVanHocVietNam.aspx.cs">
+      <DependentUpon>SachVanHocVietNam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TimKiemTheoNXB.aspx.cs">
+      <DependentUpon>TimKiemTheoNXB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TimKiemTheoTacGia.aspx.cs">
+      <DependentUpon>TimKiemTheoTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TKNamXuatBan.aspx.cs">
+      <DependentUpon>TKNamXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TKTenNhaXuatBan.aspx.cs">
+      <DependentUpon>TKTenNhaXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TKTenTacGia.aspx.cs">
+      <DependentUpon>TKTenTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TKTuaSach.aspx.cs">
+      <DependentUpon>TKTuaSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\DocGia\TuDien.aspx.cs">
+      <DependentUpon>TuDien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ChiTietGiaHan.aspx.cs">
+      <DependentUpon>ChiTietGiaHan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ChiTietHoSoLuotMuon.aspx.cs">
+      <DependentUpon>ChiTietHoSoLuotMuon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ChiTietMuonSach.aspx.cs">
+      <DependentUpon>ChiTietMuonSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ChiTietSach.aspx.cs">
+      <DependentUpon>ChiTietSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ChiTietThemDocGia.aspx.cs">
+      <DependentUpon>ChiTietThemDocGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ChiTietTraSach.aspx.cs">
+      <DependentUpon>ChiTietTraSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\DangKyTaiKhoan.aspx.cs">
+      <DependentUpon>DangKyTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\GiaHan.aspx.cs">
+      <DependentUpon>GiaHan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\LapChiTietHoaDon.aspx.cs">
+      <DependentUpon>LapChiTietHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\LapChiTietViPham.aspx.cs">
+      <DependentUpon>LapChiTietViPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\LapDocGia.aspx.cs">
+      <DependentUpon>LapDocGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\LapHoaDon.aspx.cs">
+      <DependentUpon>LapHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\LapLuotMuon.aspx.cs">
+      <DependentUpon>LapLuotMuon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachCayRau.aspx.cs">
+      <DependentUpon>SachCayRau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachChungKhoan.aspx.cs">
+      <DependentUpon>SachChungKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachCoKhi.aspx.cs">
+      <DependentUpon>SachCoKhi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachDienTu.aspx.cs">
+      <DependentUpon>SachDienTu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachDuLich.aspx.cs">
+      <DependentUpon>SachDuLich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachKhoaHocXaHoi.aspx.cs">
+      <DependentUpon>SachKhoaHocXaHoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachKinhTeHoc.aspx.cs">
+      <DependentUpon>SachKinhTeHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachKyThuatXayDung.aspx.cs">
+      <DependentUpon>SachKyThuatXayDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachLichSuTheGioi.aspx.cs">
+      <DependentUpon>SachLichSuTheGioi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachLichSuVietNam.aspx.cs">
+      <DependentUpon>SachLichSuVietNam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachLuat.aspx.cs">
+      <DependentUpon>SachLuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachQuanTri.aspx.cs">
+      <DependentUpon>SachQuanTri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachSauBenh.aspx.cs">
+      <DependentUpon>SachSauBenh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachSinhHoc.aspx.cs">
+      <DependentUpon>SachSinhHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachTaiChinh.aspx.cs">
+      <DependentUpon>SachTaiChinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachThue.aspx.cs">
+      <DependentUpon>SachThue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachThuySan.aspx.cs">
+      <DependentUpon>SachThuySan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachTinHoc.aspx.cs">
+      <DependentUpon>SachTinHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachToanHoc.aspx.cs">
+      <DependentUpon>SachToanHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachTrietHoc.aspx.cs">
+      <DependentUpon>SachTrietHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachVanHocTheGioi.aspx.cs">
+      <DependentUpon>SachVanHocTheGioi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SachVanHocVietNam.aspx.cs">
+      <DependentUpon>SachVanHocVietNam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SuaQuiDinh.aspx.cs">
+      <DependentUpon>SuaQuiDinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\SuaSach.aspx.cs">
+      <DependentUpon>SuaSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThemChucVu.aspx.cs">
+      <DependentUpon>ThemChucVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThemDocGia.aspx.cs">
+      <DependentUpon>ThemDocGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThemNhaXuatBan.aspx.cs">
+      <DependentUpon>ThemNhaXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThemSach.aspx.cs">
+      <DependentUpon>ThemSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThemTacGia.aspx.cs">
+      <DependentUpon>ThemTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKe.aspx.cs">
+      <DependentUpon>ThongKe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeHoSoDangKy.aspx.cs">
+      <DependentUpon>ThongKeHoSoDangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeLuotDangKy.aspx.cs">
+      <DependentUpon>ThongKeLuotDangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeLuotMuon.aspx.cs">
+      <DependentUpon>ThongKeLuotMuon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeNhaXuatBan.aspx.cs">
+      <DependentUpon>ThongKeNhaXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeSach.aspx.cs">
+      <DependentUpon>ThongKeSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeSachGiaHan.aspx.cs">
+      <DependentUpon>ThongKeSachGiaHan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeSachQuaHan.aspx.cs">
+      <DependentUpon>ThongKeSachQuaHan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\ThongKeTacGia.aspx.cs">
+      <DependentUpon>ThongKeTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TimKiemTheoNXB.aspx.cs">
+      <DependentUpon>TimKiemTheoNXB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TimKiemTheoTacGia.aspx.cs">
+      <DependentUpon>TimKiemTheoTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TKNamXuatBan.aspx.cs">
+      <DependentUpon>TKNamXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TKTenNhaXuatBan.aspx.cs">
+      <DependentUpon>TKTenNhaXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TKTenTacGia.aspx.cs">
+      <DependentUpon>TKTenTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TKTuaSach.aspx.cs">
+      <DependentUpon>TKTuaSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TraSach.aspx.cs">
+      <DependentUpon>TraSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TraSach1.aspx.cs">
+      <DependentUpon>TraSach1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThuVien\QuanLy\TuDien.aspx.cs">
+      <DependentUpon>TuDien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_Code\BLL\ChiTiet.cs" />
+    <Content Include="App_Code\BLL\DangKy.cs" />
+    <Content Include="App_Code\BLL\DocFileExcel.cs" />
+    <Content Include="App_Code\BLL\DocGia.cs" />
+    <Content Include="App_Code\BLL\GridViewExportUtil.cs" />
+    <Content Include="App_Code\BLL\HoaDon.cs" />
+    <Content Include="App_Code\BLL\LayThoiGian.cs" />
+    <Content Include="App_Code\BLL\LuotMuon.cs" />
+    <Content Include="App_Code\BLL\NhanVien.cs" />
+    <Content Include="App_Code\BLL\NhaXuatBan.cs" />
+    <Content Include="App_Code\BLL\QuiDinh.cs" />
+    <Content Include="App_Code\BLL\Sach.cs" />
+    <Content Include="App_Code\BLL\TacGia.cs" />
+    <Content Include="App_Code\BLL\viet.cs" />
+    <Content Include="App_Code\BLL\XuatBan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MeNu\Thumbs.db" />
+    <Content Include="MasterPage.Master" />
+    <Content Include="MasterPageQL.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49860</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49860/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,328 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageQL.master.cs" Inherits="MasterPageQL" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Quan Ly Thu Vien Sach</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>    
+    <link href="Style.css" rel="stylesheet" type="text/css" />     
+
+    
+
+<script type="text/javascript" language="JavaScript1.2" src="../../MeNu/stmenu.js"></script>
+    
+    
+    <style type="text/css">
+        .style5
+        {
+            width: 1px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <table cellpadding="0" cellspacing="0" class="Table" >
+           
+            <tr>
+                <td align="left" valign="top" style="border-width: thin; text-align: center;" 
+                    colspan="3" > 
+                    &nbsp;</td>
+            </tr>
+           
+            <tr >
+                <td colspan="3" > 
+                     <div style="text-align: center">
+                     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="1000" height="125">
+                      <param name="movie" value="../../Image/baner.swf" />
+                      <param name="quality" value="high" />
+                         <embed src="../../Image/baner.swf"
+                          quality="high"
+                          type="application/x-shockwave-flash"
+                          width="1000"
+                          height="125"
+                          pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+                    </object>
+                     </div>
+                </td>
+            </tr>
+           
+           <tr >
+                <td colspan="3"  > 
+                <div>
+                    <script type="text/javascript" language="JavaScript1.2">
+                    <!--
+                    stm_bm(["menu5df9",700,"","../../MeNu/blank.gif",0,"","",0,0,250,0,1000,1,0,0,"","1000",0,0,1,2,"default","hand",""],this);
+                    stm_bp("p0",[0,4,0,0,0,0,0,0,100,"",-2,"",-2,50,0,0,"#799BD8","transparent","../../MeNu/060417line.gif",3,0,0,"#000000","",-1,-1,0,"transparent","",3,"../../MeNu/060417buttona2.gif",26,5,0,"transparent","",3,"",-1,-1,0,"transparent","",3,"../../MeNu/060417buttona1.gif",26,5,0,"transparent","",3,"","","",""]);
+                    stm_ai("p0i0",[0,"Trang chu","","",-1,-1,0,"../../ThuVien/QuanLy/Default.aspx","_self","","","","",0,0,0,"","",0,0,0,1,1,"#FFFFF7",1,"#B5BED6",1,"","../../MeNu/060417button.gif",2,3,0,0,"#FFFFF7","#000000","#FFFFFF","#0000FF","bold 8pt Verdana","bold 8pt Verdana",0,0],90,26);
+                    stm_aix("p0i1","p0i0",[0,"Gioi thieu","","",-1,-1,0,"#","_self","","","","",0,0,0,"","",0,0,0,1,1,"#FFFFF7",1,"#B5BED6",1,"","../../MeNu/060417button.gif",3],90,26);
+                    
+                    stm_aix("p0i3","p0i1",[0,"Qui Dinh","","",-1,-1,0,""],90,26);
+         
+                    stm_ep();
+                    stm_em();
+                    //-->
+                    </script>
+                </div>
+                <div>
+                    <br />
+                </div>
+        
+                </td>
+            </tr>
+            
+            <tr >
+                <td  colspan="3" >                       
+                     <span class="AccountLink">
+                         <asp:Label ID="lbtaikhoan" runat="server" Text="TK :"></asp:Label>
+&nbsp;<asp:HyperLink ID="hlnkTaiKhoan" runat="server" style="color: #FF0066">[Tài Khoản]</asp:HyperLink>&nbsp;&nbsp;&nbsp;
+                         <asp:LinkButton ID="lnkdangxuat" runat="server" onclick="lnkdangxuat_Click">Đăng Xuất</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                           <asp:HyperLink runat="server" NavigateUrl="ThuVien/QuanLy/DangKyTaiKhoan.aspx">Đăng Ký</asp:HyperLink>&nbsp;&nbsp;&nbsp;
+                         <asp:LinkButton ID="lnkdangnhap" runat="server" OnClientClick="return OpenLoginWindow()">Đăng Nhập</asp:LinkButton>
+                     </span>                                
+                 </td>
+            </tr>
+            
+            <tr>
+                <td  colspan="3" > 
+                    <div>
+                    <span class="SiteMapPath">&nbsp;<asp:SiteMapPath ID="SiteMapPath1" 
+                            runat="server" style="color: #660033" Font-Names="Verdana" 
+                            Font-Size="0.8em" PathSeparator=" --&gt;" EnableViewState="False" 
+                            ParentLevelsDisplayed="5" RenderCurrentNodeAsLink="True">
+                            <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                            <CurrentNodeStyle ForeColor="#333333" />
+                            <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                            <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+                        </asp:SiteMapPath>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                            EnableViewState="False" ShowStartingNode="False" />
+                        </span>&nbsp;</div>
+                               
+                </td>
+            </tr>
+                                 
+            <tr>
+                <td  colspan="3" > 
+                <div><br />
+                </div>
+                    <div>
+                        <span class="timkiem">
+                            <asp:TextBox ID="txtTim" runat="server" Width="252px"></asp:TextBox>
+                                               
+                        &nbsp;
+                            <asp:DropDownList ID="drpTim" runat="server">
+                                <asp:ListItem Selected="True" Value="1">Tựa Sách</asp:ListItem>
+                                <asp:ListItem Value="2">Tác Giả</asp:ListItem>
+                                <asp:ListItem Value="3">Nhà Xuất Ban</asp:ListItem>
+                                <asp:ListItem Value="4">Năm Xuất Bản</asp:ListItem>
+                            </asp:DropDownList>
+                            &nbsp;<asp:Button ID="tbTim" runat="server" Text="Tìm Kiếm" 
+                            onclick="tbTim_Click" />
+                            </span>
+                    </div>
+                                       
+                 </td>
+            </tr>
+           
+            <tr>
+                <td align="left" valign="top" class=" tdleft" style="border-width: thin"> 
+                    
+                    <div class="divframe" 
+                        style=" margin-top:5px; height:650px; top: 0px; left: 0px;">
+                        <div class="divframe_head">
+                            Danh Mục              
+                                              </div>
+                        <div>
+                         <ul>
+                         
+                             <asp:Repeater ID="Menu" runat="server" DataSourceID="SiteMapDataSource1" 
+                                 EnableViewState="False" EnableTheming="False">
+                                 <ItemTemplate>
+                                <li>
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+
+                                <asp:Repeater ID="Repeater1" runat="server" DataSource='<%# ((SiteMapNode) Container.DataItem).ChildNodes %>'>
+                                    <HeaderTemplate>
+                                        <ul>
+                                    </HeaderTemplate>
+                                    
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                    
+                                    <FooterTemplate>
+                                        </ul>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </li>
+                        </ItemTemplate>
+                             </asp:Repeater>
+                       
+                        </ul>
+                        </div>                           
+
+                    </div>                
+                         
+                 </td>
+                <td  valign="top" class=" tdcenter">                                               
+                    <table style=" width:802px;">
+                              <tr>
+                                  <td class="style5"></td>
+                                  <td>                              
+                                         <div class=" divframe" style=" height:1044px;">
+                                            <div class="divframe_head">
+                                              </div>                                                                                                      
+                                             <div id="content" style=" color: #000000;" >
+                                            <asp:ContentPlaceHolder ID="Main" runat="server" >
+                                                   <p>&nbsp;</p>
+                                                   </asp:ContentPlaceHolder>
+                                         
+                                            </div> 
+                                        </div>                            
+                                  </td>
+                                  <td style=" width:1px;">
+                                      </td>
+                              </tr>
+                          </table>                   
+                   </td>
+                <td align="left" valign="top" class=" tdleft" >
+                    <div class="divframe" 
+                        style=" margin-top:5px; height:225px; font-family: Tahoma;">
+                        <div class="divframe_head">
+                            Thư Viện Trường                             
+                        </div>
+                        <div style=" margin-top:5px; height:200px; width:200px; font-family: Tahoma;">
+                            <asp:Image ID="imgThuVien" runat="server" Height="190px" Width="190px" 
+                                ImageUrl="~/Image/thuvientruong.gif" />
+                        </div>
+                    </div>                      
+                     <div>
+                         <br/>
+                     </div>                     
+                    <div class="divframe" style=" height:300px">
+                        <div class="divframe_head">
+                            Tác Giả
+                                                                               
+                        </div>
+                        <div style="width:170px; margin-left:10px; margin-right:10px;"  >                 
+                            
+                           
+                                <asp:GridView ID="grdTacGia" runat="server" AutoGenerateColumns="False" 
+                                    DataKeyNames="MaTacGia" DataSourceID="sqTacGia" ForeColor="Black" 
+                                    AllowPaging="True" BackColor="LightGoldenrodYellow" BorderColor="Tan" 
+                                    BorderWidth="1px" CellPadding="2" GridLines="None" 
+                                    onselectedindexchanged="grdTacGia_SelectedIndexChanged">
+                                    <Columns>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <asp:HyperLink ID="HyperLink1" runat="server" 
+                                                    NavigateUrl='<%# Eval("MaTacGia", "~/ThuVien/QuanLy/TimKiemTheoTacGia.aspx?MaTacGia={0}") %>' 
+                                                    style="font-size: small" Text='<%# Eval("TenTacGia", "{0}") %>'></asp:HyperLink>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <FooterStyle BackColor="Tan" />
+                                    <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" 
+                                        HorizontalAlign="Center" />
+                                    <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                                    <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                                    <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="sqTacGia" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                    SelectCommand="SELECT * FROM [TacGia]"></asp:SqlDataSource>
+                           
+                            
+                        </div>
+                    </div>  
+                     <div>
+                         <br/>
+                     </div>                     
+                    <div class="divframe" style="height:300px">
+                        <div class="divframe_head" >
+                            Nhà Xuất Bản</div>
+                            <div style="width:180px; margin-left:10px; margin-right:10px">
+                                
+                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                                        DataKeyNames="MaNhaXuatBan" DataSourceID="sqlNXB" AllowPaging="True" 
+                                        BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" 
+                                        CellPadding="2" ForeColor="Black" GridLines="None">
+                                        <Columns>
+                                            <asp:HyperLinkField DataNavigateUrlFields="MaNhaXuatBan" 
+                                                DataNavigateUrlFormatString="~/ThuVien/QuanLy/TimKiemTheoNXB.aspx?MaNhaXuatBan={0}" 
+                                                DataTextField="TenNhaXuatBan" DataTextFormatString="{0}" />
+                                        </Columns>
+                                        <FooterStyle BackColor="Tan" />
+                                        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" 
+                                            HorizontalAlign="Center" />
+                                        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                                        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                                        <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="sqlNXB" runat="server" 
+                                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                        SelectCommand="SELECT * FROM [NhaXuatBan]"></asp:SqlDataSource>
+                                
+                            </div>
+                    </div>                  
+                     <div>
+                         <br/>
+                     </div>                     
+                    <div class="divframe" style="height:150px">
+                        <div class="divframe_head">
+                        LoGo Nhà Xuất Bản                        
+                        </div>
+                         <div style=" margin-top:10px; margin-left:50px; margin-bottom:10px;
+                             height:100px; width:100px; font-family: Tahoma;">
+                            <asp:Image ID="Image1" runat="server" Height="100px" 
+                                ImageUrl="~/Image/logo.gif" Width="100px" />
+                        </div>
+                    </div>                                        
+                 </td>
+            </tr>
+            
+            <tr>
+                <td colspan="3">                    
+                    &nbsp;</td>
+            </tr>
+            
+             <tr>
+                <td colspan="3" class=" bottom">
+                
+                <h3 style="color: #FF0066">Trường Đại Học Cửu Long> </h3> 
+                <ul>             <li class="style4">ÐT: 0703 831 155-0703 821 655</li>
+                <li style="color: #CC33FF">Fax: 0703 657 011</li>
+                </ul>
+                 </td>
+            </tr>
+        </table>    
+    </div>
+   
+    <script language="javascript" type="text/javascript">
+        function OpenLoginWindow() {
+    var winWidth = 370;
+    var winHeight = 270;
+    winLeft=(screen.width-winWidth)/2;
+    winTop=(screen.height-winHeight)/2;
+    s=location.pathname.substring(0, location.pathname.indexOf("/",1))//s la "/Quanlytuyensinh"
+    s="http://"+location.host+s+"/ThuVien/QuanLy/DangNhap.aspx";//localhost.host la "localhost:'so'"
+    win=window.open(s,"DangNhap","resizable=no,scrollbars=no,width="+winWidth+",height="+winHeight+",left="+winLeft+",top="+winTop);
+    win.focus();
+    return false;
+}
+    </script>
+    </form>
+</body>
+</html>
+
+

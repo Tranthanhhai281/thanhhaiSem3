@@ -1,0 +1,2 @@
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\Li4u\Li4u\obj\Debug\Li4u.csprojAssemblyReference.cache
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\Li4u\Li4u\obj\Debug\Li4u.csproj.CoreCompileInputs.cache

@@ -1,0 +1,6 @@
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\WCFTour\WCFTour\obj\Debug\WCFTour.csproj.CoreCompileInputs.cache
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\WCFTour\WCFTour\bin\WCFTour.dll.config
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\WCFTour\WCFTour\bin\WCFTour.dll
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\WCFTour\WCFTour\bin\WCFTour.pdb
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\WCFTour\WCFTour\obj\Debug\WCFTour.dll
+E:\Hoc Lap Trinh\SEM3\thanhhaiSem3\EAP+ADI\WCFTour\WCFTour\obj\Debug\WCFTour.pdb
